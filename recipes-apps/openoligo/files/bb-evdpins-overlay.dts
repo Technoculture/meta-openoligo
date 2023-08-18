@@ -1,0 +1,110 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+    /* Add exclusive-use for each pin */
+    exclusive-use =
+        /* Pin P9.11 */
+        "P9.11",
+        "gpio0_30",
+
+        /* Pin P9.15 */
+        "P9.15",
+        "gpio1_16",
+
+        /* Pin P9.23 */
+        "P9.23",
+        "gpio1_17",
+
+        /* Pin P9.25 */
+        "P9.25",
+        "gpio3_21",
+
+        /* Pin P9.27 */
+        "P9.27",
+        "gpio3_19",
+
+        /* Pin P9.30 */
+        "P9.30",
+        "gpio3_16";
+
+    fragment@0 {
+        target = <&am33xx_pinmux>;
+        __overlay__ {
+            /* Add pinmux configurations for each pin */
+            bs_pinmode_P9_11_0x27: pinmux_bs_pinmode_P9_11_0x27 {
+                pinctrl-single,pins = <0x070 0x27>;
+            };
+
+            bs_pinmode_P9_15_0x27: pinmux_bs_pinmode_P9_15_0x27 {
+                pinctrl-single,pins = <0x040 0x27>;
+            };
+
+            bs_pinmode_P9_23_0x27: pinmux_bs_pinmode_P9_23_0x27 {
+                pinctrl-single,pins = <0x044 0x27>;
+            };
+
+            bs_pinmode_P9_25_0x27: pinmux_bs_pinmode_P9_25_0x27 {
+                pinctrl-single,pins = <0x1ac 0x27>;
+            };
+
+            bs_pinmode_P9_27_0x27: pinmux_bs_pinmode_P9_27_0x27 {
+                pinctrl-single,pins = <0x1a4 0x27>;
+            };
+
+            bs_pinmode_P9_30_0x27: pinmux_bs_pinmode_P9_30_0x27 {
+                pinctrl-single,pins = <0x198 0x27>;
+            };
+        };
+    };
+
+    fragment@1 {
+        target = <&ocp>;
+        __overlay__ {
+            bs_pinmode_P9_11_0x27_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&bs_pinmode_P9_11_0x27>;
+            };
+
+            bs_pinmode_P9_15_0x27_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&bs_pinmode_P9_15_0x27>;
+            };
+
+            bs_pinmode_P9_23_0x27_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&bs_pinmode_P9_23_0x27>;
+            };
+
+            bs_pinmode_P9_25_0x27_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&bs_pinmode_P9_25_0x27>;
+            };
+
+            bs_pinmode_P9_27_0x27_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&bs_pinmode_P9_27_0x27>;
+            };
+
+            bs_pinmode_P9_30_0x27_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&bs_pinmode_P9_30_0x27>;
+            };
+        };
+    };
+};
+

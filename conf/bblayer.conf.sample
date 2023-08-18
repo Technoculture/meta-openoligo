@@ -1,0 +1,21 @@
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-poky \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-yocto-bsp \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-openembedded/meta-oe \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-openembedded/meta-networking \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-openembedded/meta-python \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-openoligo \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-jupyter \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-arm/meta-arm \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-arm/meta-arm-toolchain \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-ti/meta-ti-bsp \
+  /mnt/aa6e9e6c-2421-4c86-a382-7ac42ad34ddc/home/augustine/Sundar/beaglebone/poky-kirkstone/meta-ti/meta-ti-extras \
+  "

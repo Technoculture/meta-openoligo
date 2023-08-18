@@ -1,0 +1,42 @@
+List of python packages  installed as part of yocto:
+-----------------------------------------------------
+    python-aerich 
+    python-docstring-parser 
+    python-charset-normalizer 
+    python-click 
+    python-h11 
+    python-httpcore 
+    python-mako 
+    python-pypika-tortoise 
+    python-python-dotenv 
+    python-tortoise-orm 
+    python-types-tqdm
+    
+List of python packages to be installed:
+----------------------------------------
+python-aiosqlite_0.19.0
+python-annotated-types_0.5.0
+python-certifi_2023.5.7
+python-dictdiffer_0.9.0
+python-fastapi_0.100.0
+python-httpx_0.24.1
+python-hug_2.6.1
+python-idna_3.4
+python-iso8601_2.0.0
+python-markdown_3.4.3
+python-markdown-it-py_3.0.0
+python-mdurl_0.1.2
+python-pdocs_1.2.0
+python-pydantic_2.0.2
+python-pygments_2.15.1
+python-pytz_2023.3
+python-requests_2.31.0
+python-rich_13.4.2
+python-sh_2.0.4
+python-sniffio_1.3.0
+python-starlette_0.28.0
+python-tomlkit_0.11.8
+python-tqdm_4.65.0
+python-typing-extensions_4.7.1
+python-urllib3_2.0.3
+

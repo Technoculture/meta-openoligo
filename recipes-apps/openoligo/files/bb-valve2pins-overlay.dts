@@ -1,0 +1,216 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,beaglebone", "ti,beaglebone-black";
+    
+    /* Combined exclusive-use for all pins */
+    exclusive-use =
+    /* Pin names */
+    "P8.27", "P8.28", "P8.29", "P8.30", "P8.31", "P8.32", "P8.33", "P8.34",
+    "P8.35", "P8.36", "P8.37", "P8.38", "P8.39", "P8.40", "P8.41", "P8.42",
+    "P8.43", "P8.44", "P8.45", "P8.46",
+    /* GPIO names */
+    "gpio2_22", "gpio2_24", "gpio2_23", "gpio2_25", "gpio0_10", "gpio0_11",
+    "gpio0_9", "gpio2_17", "gpio0_8", "gpio2_16", "gpio2_14", "gpio2_15",
+    "gpio2_12", "gpio2_13", "gpio2_10", "gpio2_11", "gpio2_8", "gpio2_9",
+    "gpio2_6", "gpio2_7";
+
+    /* Pin configurations for P8.27 to P8.46 */
+    fragment@0 {
+        target = <&am33xx_pinmux>;
+        __overlay__ {
+            /* Pin configurations for P8.27 to P8.46 */
+            pinmux_bs_pinmode_P8_27: pinmux_bs_pinmode_P8_27 {
+                pinctrl-single,pins = <0x0e0 0x7>;
+            };
+            pinmux_bs_pinmode_P8_28: pinmux_bs_pinmode_P8_28 {
+                pinctrl-single,pins = <0x0e8 0x7>;
+            };
+            pinmux_bs_pinmode_P8_29: pinmux_bs_pinmode_P8_29 {
+                pinctrl-single,pins = <0x0e4 0x7>;
+            };
+            pinmux_bs_pinmode_P8_30: pinmux_bs_pinmode_P8_30 {
+                pinctrl-single,pins = <0x0ec 0x7>;
+            };
+            pinmux_bs_pinmode_P8_31: pinmux_bs_pinmode_P8_31 {
+                pinctrl-single,pins = <0x0d8 0x7>;
+            };
+            pinmux_bs_pinmode_P8_32: pinmux_bs_pinmode_P8_32 {
+                pinctrl-single,pins = <0x0dc 0x7>;
+            };
+            pinmux_bs_pinmode_P8_33: pinmux_bs_pinmode_P8_33 {
+                pinctrl-single,pins = <0x0d4 0x7>;
+            };
+            pinmux_bs_pinmode_P8_34: pinmux_bs_pinmode_P8_34 {
+                pinctrl-single,pins = <0x0cc 0x7>;
+            };
+            pinmux_bs_pinmode_P8_35: pinmux_bs_pinmode_P8_35 {
+                pinctrl-single,pins = <0x0d0 0x7>;
+            };
+            pinmux_bs_pinmode_P8_36: pinmux_bs_pinmode_P8_36 {
+                pinctrl-single,pins = <0x0c8 0x7>;
+            };
+            pinmux_bs_pinmode_P8_37: pinmux_bs_pinmode_P8_37 {
+                pinctrl-single,pins = <0x0c0 0x7>;
+            };
+            pinmux_bs_pinmode_P8_38: pinmux_bs_pinmode_P8_38 {
+                pinctrl-single,pins = <0x0c4 0x7>;
+            };
+            pinmux_bs_pinmode_P8_39: pinmux_bs_pinmode_P8_39 {
+                pinctrl-single,pins = <0x0b8 0x7>;
+            };
+            pinmux_bs_pinmode_P8_40: pinmux_bs_pinmode_P8_40 {
+                pinctrl-single,pins = <0x0bc 0x7>;
+            };
+            pinmux_bs_pinmode_P8_41: pinmux_bs_pinmode_P8_41 {
+                pinctrl-single,pins = <0x0b0 0x7>;
+            };
+            pinmux_bs_pinmode_P8_42: pinmux_bs_pinmode_P8_42 {
+                pinctrl-single,pins = <0x0b4 0x7>;
+            };
+            pinmux_bs_pinmode_P8_43: pinmux_bs_pinmode_P8_43 {
+                pinctrl-single,pins = <0x0a8 0x7>;
+            };
+            pinmux_bs_pinmode_P8_44: pinmux_bs_pinmode_P8_44 {
+                pinctrl-single,pins = <0x0ac 0x7>;
+            };
+            pinmux_bs_pinmode_P8_45: pinmux_bs_pinmode_P8_45 {
+                pinctrl-single,pins = <0x0a0 0x7>;
+            };
+            pinmux_bs_pinmode_P8_46: pinmux_bs_pinmode_P8_46 {
+                pinctrl-single,pins = <0x0a4 0x7>;
+            };
+        };
+    };
+
+    /* Pin helper configurations for P8.27 to P8.46 */
+    fragment@1 {
+        target = <&ocp>;
+        __overlay__ {
+            bs_pinmode_P8_27_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_27>;
+            };
+            bs_pinmode_P8_28_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_28>;
+            };
+            bs_pinmode_P8_29_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_29>;
+            };
+            bs_pinmode_P8_30_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_30>;
+            };
+            bs_pinmode_P8_31_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_31>;
+            };
+            bs_pinmode_P8_32_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_32>;
+            };
+            bs_pinmode_P8_33_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_33>;
+            };
+            bs_pinmode_P8_34_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_34>;
+            };
+            bs_pinmode_P8_35_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_35>;
+            };
+            bs_pinmode_P8_36_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_36>;
+            };
+            bs_pinmode_P8_37_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_37>;
+            };
+            bs_pinmode_P8_38_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_38>;
+            };
+            bs_pinmode_P8_39_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_39>;
+            };
+            bs_pinmode_P8_40_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_40>;
+            };
+            bs_pinmode_P8_41_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_41>;
+            };
+            bs_pinmode_P8_42_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_42>;
+            };
+            bs_pinmode_P8_43_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_43>;
+            };
+            bs_pinmode_P8_44_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_44>;
+            };
+            bs_pinmode_P8_45_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_45>;
+            };
+            bs_pinmode_P8_46_pinmux {
+                compatible = "bone-pinmux-helper";
+                status = "okay";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinmux_bs_pinmode_P8_46>;
+            };
+        };
+    };
+};
+
+
+
